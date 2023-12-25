@@ -1,0 +1,841 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/stars-1845140_1280.jpg');
+    background-size: 100%;
+}
+
+
+.sun{
+    z-index: 8;
+    height: 120px;
+    width: 120px;
+    background-image: url('../images/sun-8328084_1280.png');
+    background-size: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    filter: drop-shadow(0px 0px 50px #ffa20d); 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.152s ease-in-out, width 0.152s ease-in-out, height 0.152s ease-in-out;
+}
+
+
+.sunButton:disabled {
+  cursor: default;
+}
+
+.sun:hover,
+.sunButton:hover + .sun {
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+
+.sun-link {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove default link styling */
+}
+
+
+.sunButton{
+    appearance: button;
+    position: relative;
+    backface-visibility: hidden;
+    background-color: #405bf500;
+    background-size: cover;
+    background-position:center;
+    border: none;
+    color:#2856d600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.mercury{
+    height: 20px;
+    width: 20px;
+    background: #a94c2b;
+    background-image: url('../images/mercury-153570_1280.png');
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: -4px 2px 56px #f9c05f;
+    left: 43%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+    animation: orbit2 20s linear infinite;
+    transition: width 0.3s, height 0.3s;
+    pointer-events: auto;
+}
+
+.mercury-link {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove default link styling */
+}
+
+.mercuryButton:disabled {
+  cursor: default;
+}
+
+.mercury:hover,
+.mercuryButton:hover + .mercury {
+    height: 25%;
+    width: 25%;
+}
+
+.mercuryButton{
+    appearance: button;
+    position: relative;
+    backface-visibility: hidden;
+    background-color: #405bf500;
+    background-size: cover;
+    background-position:center;
+    border: none;
+    color:#2856d600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+@keyframes orbit2{
+    from{
+        transform: rotate(0deg) translate(70px) rotate(0deg);
+    }
+        to{
+            transform: rotate(360deg) translate(70px) rotate(-360deg);
+        }
+}
+
+p{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: -97%;
+    top: 10px;
+}
+
+.mercury-outline,.venus-outline-1,.earth-outline-1,.mars-outline-1,.jupiter-outline-1,.saturn-outline-1,.uranus-outline-1,.neptune-outline-1,.pluto-outline-1{
+    border-radius: 50%;
+    border: 1px dotted #ddd9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mercury-outline{
+    z-index: 9;
+    height: 140px;
+    width: 140px;
+    pointer-events: none;
+}
+
+
+.venus{
+    height: 40px;
+    width: 40px;
+    background-image: url('../images/venus-151142_1280.png');
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    top: 42%;
+    display: block;
+    transform: translate(-50%, -50%);
+    animation: orbit3 10s linear infinite;
+    transition: width 0.3s, height 0.3s;
+    pointer-events: auto;
+}
+
+.venus-link {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove default link styling */
+}
+
+.venusButton:disabled {
+  cursor: default;
+}
+
+.venus:hover,
+.venusButton:hover + .venus {
+    height: 27%;
+    width: 27%;
+}
+
+
+.venusButton{
+    appearance: button;
+    position: relative;
+    backface-visibility: hidden;
+    background-color: #405bf500;
+    background-size: cover;
+    background-position:center;
+    border: none;
+    color:#2856d600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+@keyframes orbit3{
+    from{
+        transform: rotate(0deg) translate(100px) rotate(0deg);
+    }
+        to{
+            transform: rotate(360deg) translate(100px) rotate(-360deg);
+        }
+}
+
+.venus-outline-1{
+    z-index: 8;
+    height: 200px;
+    width: 200px;
+    pointer-events: none;
+}
+
+p3{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    left: -1%;
+    top: 110%;
+}
+
+.earth{
+    height: 50px;
+    width: 50px;
+    background-image: url('../images/world-1301744_1280.png');
+    background-size: 100%;
+    border-radius: 100%;
+    position: absolute;
+    box-shadow: -4px 2px 56px #2855d6;
+    left: 40%;
+    top: 43%;
+    transform: translate(-50%, -50%);
+    animation: orbit4 200s linear infinite;
+    transition: width 0.3s, height 0.3s;
+}
+
+
+.earth-link {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove default link styling */
+}
+
+.earthButton:disabled {
+  cursor: default;
+}
+
+.earth:hover,
+
+.earth:hover{
+    height: 21%;
+    width: 21%;
+}
+
+.earth:hover .earth-circle{
+    height: 125%;
+    width: 125%;
+}
+
+.earth:hover .earth-inner{
+    animation: orbitMOON 3s linear infinite;
+}
+
+@keyframes orbitMOON {
+    0% {
+        transform: rotate(0deg) translate(40px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translate(40px) rotate(-360deg);
+    }
+}
+
+
+.earthButton{
+    appearance: button;
+    position: relative;
+    backface-visibility: hidden;
+    background-color: #405bf500;
+    background-size: cover;
+    background-position:center;
+    border: none;
+    color:#2856d600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+p2{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    left: 13%;
+    top: 135%;
+}
+
+@keyframes orbit4{
+    from{
+        transform: rotate(00deg) translate(150px) rotate(0deg);
+    }
+        to{
+            transform: rotate(360deg) translate(150px) rotate(-360deg);
+        }
+}
+
+.earth-outline-1{
+    height: 300px;
+    width: 300px;
+    z-index: 7;
+}
+
+.earth-circle{
+    height: 65px;
+    width: 65px;
+    border: 1px dotted #fff;
+    position: relative;
+    left: -8px;
+    top: -8px;
+    border-radius: 40px;
+    pointer-events:none;
+    transition: width 0.3s, height 0.3s;
+}
+
+.earth-inner{
+    height: 10px;
+    width: 10px;
+    background-image: url('../images/moon-159383_1280.png');
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 45%;
+    top: 45%;
+    animation: orbit5 3s linear infinite;
+    pointer-events:none;
+    transition: width 0.3s, height 0.3s;
+}
+
+@keyframes orbit5{
+    from{
+        transform: rotate(0deg) translate(33px) rotate(0deg);
+    }
+        to{
+            transform: rotate(360deg) translate(33px) rotate(-360deg);
+        }
+}
+
+.mars{
+    height: 30px;
+    width: 30px;
+    background-image: url('../images/mars-25461_1280.png');
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: -4px 2x 56px #fea535;
+    left: 46.5%;
+    top: 46.5%;
+    transform: translate(-50%, -50%);
+    animation: orbit6 30s linear infinite;
+    transition: width 0.3s, height 0.3s;
+}
+
+.mars-link {
+    z-index: 10;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove default link styling */
+}
+
+.marsButton:disabled {
+  cursor: default;
+}
+
+.mars:hover,
+.mars:hover + .mars {
+    height: 12%;
+    width: 12%;
+}
+
+.marsButton{
+    z-index: 10;
+    appearance: button;
+    position: relative;
+    backface-visibility: hidden;
+    background-color: #405bf500;
+    background-size: cover;
+    background-position:center;
+    border: none;
+    color:#2856d600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+@keyframes orbit6{
+    from{
+        transform: rotate(0deg) translate(185px) rotate(0deg);
+    }
+        to{
+            transform: rotate(360deg) translate(185px) rotate(-360deg);
+        }
+}
+
+p4{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    left: -5%;
+    top: 120%;
+}
+
+.mars-outline-1{
+    height: 370px;
+    width: 370px;
+    z-index: 6;
+}
+
+.jupiter{
+    height: 40px;
+    width: 40px;
+    background-image: url('../images/jupiter-153563_1280.png');
+    background-size: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 90px #f5bb78;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    animation: orbit7 10s linear infinite;
+    transition: width 0.3s, height 0.3s;
+}
+
+.jupiter-link {
+    z-index: 10;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove default link styling */
+}
+
+.jupiterButton:disabled {
+  cursor: default;
+}
+
+.jupiter:hover,
+.jupiter:hover + .jupiter {
+    height: 13%;
+    width: 13%;
+}
+
+.jupiterButton{
+    z-index: 10;
+    appearance: button;
+    position: relative;
+    backface-visibility: hidden;
+    background-color: #405bf500;
+    background-size: cover;
+    background-position:center;
+    border: none;
+    color:#2856d600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+@keyframes orbit7{
+    from{
+        transform: rotate(0deg) translate(217px) rotate(0deg);
+    }
+        to{
+            transform: rotate(360deg) translate(217px) rotate(-360deg);
+        }
+}
+
+.jupiter-outline-1{
+    height: 430px;
+    width: 430px;
+    z-index: 5;
+}
+
+p5{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    left: -8%;
+    top: 110%;
+}
+
+.saturn{
+    height: 50px;
+    width: 50px;
+    background-image: url('../images/saturn-6153860_1280.png');
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    animation: orbit8 90s linear infinite;
+    transition: width 0.3s, height 0.3s;
+}
+
+.saturn-link {
+    z-index: 10;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove default link styling */
+}
+
+.saturnButton:disabled {
+  cursor: default;
+}
+
+.saturn:hover,
+.saturn:hover + .saturn {
+    height: 14%;
+    width: 14%;
+}
+
+.saturnButton{
+    z-index: 10;
+    appearance: button;
+    position: relative;
+    backface-visibility: hidden;
+    background-color: #405bf500;
+    background-size: cover;
+    background-position:center;
+    border: none;
+    color:#2856d600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+@keyframes orbit8{
+    from{
+        transform: rotate(0deg) translate(250px) rotate(0deg);
+    }
+        to{
+            transform: rotate(360deg) translate(250px) rotate(-360deg);
+        }
+}
+
+p6{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    left: 0%;
+    top: 80%;
+}
+
+.saturn-outline-1{
+    height: 500px;
+    width: 500px;
+    z-index: 4;
+}
+
+.uranus{
+    height: 30px;
+    width: 30px;
+    background-image: url('../images/uranus-153572_1280.png');
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: -4px 2px 56px #cac2b9;
+    top: 48%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    animation: orbit9 200s linear infinite;
+    transition: width 0.3s, height 0.3s;
+}
+
+
+.uranus-link {
+    z-index: 10;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove default link styling */
+}
+
+.uranusButton:disabled {
+  cursor: default;
+}
+
+.uranus:hover,
+.uranusButton:hover + .uranus {
+    height: 8%;
+    width: 8%;
+}
+
+.uranusButton{
+    z-index: 10;
+    appearance: button;
+    position: relative;
+    backface-visibility: hidden;
+    background-color: #405bf500;
+    background-size: cover;
+    background-position:center;
+    border: none;
+    color:#2856d600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+@keyframes orbit9{
+    from{
+        transform: rotate(0deg) translate(280px) rotate(0deg);
+    }
+        to{
+            transform: rotate(360deg) translate(280px) rotate(-360deg);
+        }
+}
+
+p7{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    left: -35%;
+    top: 120%;
+}
+
+.uranus-outline-1{
+    height: 560px;
+    width: 560px;
+    z-index: 3;
+}
+
+.neptune{
+    height: 30px;
+    width: 30px;
+    background-image: url('../images/neptune-153571_1280.png');
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    box-shadow: -4px 2px 56px #cac2b9;
+    transform: translate(-50%, -50%);
+    animation: orbit10 400s linear infinite;
+    transition: width 0.3s, height 0.3s;
+}
+
+
+@keyframes orbit10{
+    from{
+        transform: rotate(0deg) translate(310px) rotate(0deg);
+    }
+        to{
+            transform: rotate(360deg) translate(310px) rotate(-360deg);
+        }
+}
+
+p8{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    left: -55%;
+    top: 120%;
+}
+
+.neptune-outline-1{
+    height: 620px;
+    width: 620px;
+    z-index: 2;
+}
+
+.neptune-link {
+    z-index: 10;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove default link styling */
+}
+
+.neptuneButton:disabled {
+  cursor: default;
+}
+
+.neptune:hover,
+.neptune:hover + .neptune {
+    height: 7%;
+    width: 7%;
+}
+
+.neptuneButton{
+    z-index: 10;
+    appearance: button;
+    position: relative;
+    backface-visibility: hidden;
+    background-color: #405bf500;
+    background-size: cover;
+    background-position:center;
+    border: none;
+    color:#2856d600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+.pluto{
+    height: 8px;
+    width: 8px;
+    background-image: url('../images/pluto-8236209_1280.png');
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: -4px 2px 56px #cac2b9;
+    transform: translate(-50%, -50%);
+    animation: orbit11 600s linear infinite;
+    transition: width 0.3s, height 0.3s;
+}
+
+@keyframes orbit11{
+    from{
+        transform: rotate(0deg) translate(360px) rotate(0deg);
+    }
+        to{
+            transform: rotate(360deg) translate(360px) rotate(-360deg);
+        }
+}
+
+.pluto-outline-1{
+    height: 720px;
+    width: 720px;
+    z-index: 1;
+}
+
+p9{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    left: -170%;
+    top: 230%;
+}
+
+.pluto-link {
+    z-index: 10;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove default link styling */
+}
+
+.plutoButton:disabled {
+  cursor: default;
+}
+
+.pluto:hover,
+.pluto:hover + .pluto {
+    height: 3%;
+    width: 3%;
+}
+
+.plutoButton{
+    z-index: 10;
+    appearance: button;
+    position: relative;
+    backface-visibility: hidden;
+    background-color: #405bf500;
+    background-size: cover;
+    background-position:center;
+    border: none;
+    color:#2856d600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
