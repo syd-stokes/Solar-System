@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/stars-1845140_1280.jpg');
+    background-size: 100%;
+}
+
+.saturn{
+    height: 1700px;
+    width: 1700px;
+    background-image: url('../images/saturn-6153860_1280.png');
+    background-size: cover;
+    border-radius: 100%;
+    position: absolute;
+    filter: drop-shadow(2px 4px 70px #cbc2aa); 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
